@@ -1,0 +1,317 @@
+/* ============================================================
+   SOUNDINGS — Design Tokens
+   Shared stylesheet for Financial Compass standalone tools.
+   Extracted from finance-platform/app/globals.css
+   Keep in sync when updating the main design system.
+   ============================================================ */
+
+/* ── Font ── */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+/* ============================================================
+   LIGHT MODE — Default
+   ============================================================ */
+:root {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+
+  /* --- Brand --- */
+  --color-brand-primary:     #002244;   /* Nautical Blue */
+  --color-brand-secondary:   #B0B7BC;   /* New Century Silver */
+
+  /* --- Backgrounds --- */
+  --color-bg-page:           #F4F6F7;   /* Seafoam White */
+  --color-bg-surface:        #FFFFFF;   /* White — cards, panels, inputs */
+  --color-bg-overlay:        #FFFFFF;   /* Modals, popovers */
+
+  /* --- Text --- */
+  --color-text-primary:      #1C3A5C;   /* Deep Water */
+  --color-text-secondary:    #5A6670;   /* Slate */
+  --color-text-disabled:     #9BA7B0;   /* Placeholder, disabled states */
+  --color-text-inverse:      #FFFFFF;   /* Text on dark/brand backgrounds */
+  --color-text-brand:        #002244;   /* Nautical Blue — headings */
+
+  /* --- Borders --- */
+  --color-border-default:    #D8DEDF;   /* Chart Grey */
+  --color-border-focus:      #1A7ABF;   /* Horizon Blue — focused inputs */
+  --color-border-strong:     #B0B7BC;   /* New Century Silver — emphasis */
+
+  /* --- Interactive --- */
+  --color-interactive:       #1A7ABF;   /* Horizon Blue */
+  --color-interactive-hover: #145F96;
+  --color-interactive-light: #EBF4FC;   /* Tint — selected bg, hover bg */
+
+  /* --- Success --- */
+  --color-success:           #0E9E82;   /* Sea Glass */
+  --color-success-bg:        #E6F4F1;
+  --color-success-text:      #0A6B58;
+
+  /* --- Warning --- */
+  --color-warning:           #F5A623;   /* Buoy Amber */
+  --color-warning-bg:        #FEF3E2;
+  --color-warning-text:      #7A4800;
+
+  /* --- Error --- */
+  --color-error:             #D64045;   /* Flare Red */
+  --color-error-bg:          #FCEAEA;
+  --color-error-text:        #8C1F22;
+
+  /* --- Nav (always dark) --- */
+  --color-nav-bg:            #002244;
+  --color-nav-text:          #B0B7BC;
+  --color-nav-text-active:   #FFFFFF;
+  --color-nav-accent:        #1A7ABF;
+
+  /* --- Font sizes --- */
+  --text-xs:   0.75rem;    /* 12px */
+  --text-sm:   0.8125rem;  /* 13px */
+  --text-base: 0.9375rem;  /* 15px */
+  --text-md:   1rem;       /* 16px */
+  --text-lg:   1.125rem;   /* 18px */
+  --text-xl:   1.25rem;    /* 20px */
+  --text-2xl:  1.5rem;     /* 24px */
+  --text-3xl:  1.875rem;   /* 30px */
+
+  /* --- Spacing --- */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+
+  /* --- Border radius --- */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-full: 9999px;
+
+  /* --- Shadows --- */
+  --shadow-sm:  0 1px 3px rgba(0, 34, 68, 0.08);
+  --shadow-md:  0 4px 12px rgba(0, 34, 68, 0.10);
+  --shadow-lg:  0 8px 24px rgba(0, 34, 68, 0.12);
+
+  /* --- Transitions --- */
+  --transition-fast:   150ms ease;
+  --transition-normal: 250ms ease;
+}
+
+/* ============================================================
+   DARK MODE
+   ============================================================ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-brand-primary:     #1565A8;
+    --color-brand-secondary:   #B0B7BC;
+    --color-bg-page:           #0A1628;
+    --color-bg-surface:        #172D47;
+    --color-bg-overlay:        #1E3654;
+    --color-text-primary:      #E8EDF2;
+    --color-text-secondary:    #8FBCD6;
+    --color-text-disabled:     #4A6080;
+    --color-text-inverse:      #FFFFFF;
+    --color-text-brand:        #E8EDF2;
+    --color-border-default:    #2A4462;
+    --color-border-focus:      #1A7ABF;
+    --color-border-strong:     #3A5878;
+    --color-interactive:       #1A7ABF;
+    --color-interactive-hover: #2089D4;
+    --color-interactive-light: #0D2340;
+    --color-success:           #3DCFB0;
+    --color-success-bg:        #0A2820;
+    --color-success-text:      #3DCFB0;
+    --color-warning:           #F5C06A;
+    --color-warning-bg:        #2A1E0A;
+    --color-warning-text:      #F5C06A;
+    --color-error:             #E86B6F;
+    --color-error-bg:          #2A0D0E;
+    --color-error-text:        #E86B6F;
+    --color-nav-bg:            #051020;
+    --color-nav-text:          #B0B7BC;
+    --color-nav-text-active:   #FFFFFF;
+    --color-nav-accent:        #1A7ABF;
+    --shadow-sm:  0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md:  0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-lg:  0 8px 24px rgba(0, 0, 0, 0.5);
+  }
+}
+
+[data-theme="dark"] {
+  --color-brand-primary:     #1565A8;
+  --color-brand-secondary:   #B0B7BC;
+  --color-bg-page:           #0A1628;
+  --color-bg-surface:        #172D47;
+  --color-bg-overlay:        #1E3654;
+  --color-text-primary:      #E8EDF2;
+  --color-text-secondary:    #8FBCD6;
+  --color-text-disabled:     #4A6080;
+  --color-text-inverse:      #FFFFFF;
+  --color-text-brand:        #E8EDF2;
+  --color-border-default:    #2A4462;
+  --color-border-focus:      #1A7ABF;
+  --color-border-strong:     #3A5878;
+  --color-interactive:       #1A7ABF;
+  --color-interactive-hover: #2089D4;
+  --color-interactive-light: #0D2340;
+  --color-success:           #3DCFB0;
+  --color-success-bg:        #0A2820;
+  --color-success-text:      #3DCFB0;
+  --color-warning:           #F5C06A;
+  --color-warning-bg:        #2A1E0A;
+  --color-warning-text:      #F5C06A;
+  --color-error:             #E86B6F;
+  --color-error-bg:          #2A0D0E;
+  --color-error-text:        #E86B6F;
+  --color-nav-bg:            #051020;
+  --color-nav-text:          #B0B7BC;
+  --color-nav-text-active:   #FFFFFF;
+  --color-nav-accent:        #1A7ABF;
+  --shadow-sm:  0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md:  0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg:  0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] {
+  --color-brand-primary:     #002244;
+  --color-brand-secondary:   #B0B7BC;
+  --color-bg-page:           #F4F6F7;
+  --color-bg-surface:        #FFFFFF;
+  --color-bg-overlay:        #FFFFFF;
+  --color-text-primary:      #1C3A5C;
+  --color-text-secondary:    #5A6670;
+  --color-text-disabled:     #9BA7B0;
+  --color-text-inverse:      #FFFFFF;
+  --color-text-brand:        #002244;
+  --color-border-default:    #D8DEDF;
+  --color-border-focus:      #1A7ABF;
+  --color-border-strong:     #B0B7BC;
+  --color-interactive:       #1A7ABF;
+  --color-interactive-hover: #145F96;
+  --color-interactive-light: #EBF4FC;
+  --color-success:           #0E9E82;
+  --color-success-bg:        #E6F4F1;
+  --color-success-text:      #0A6B58;
+  --color-warning:           #F5A623;
+  --color-warning-bg:        #FEF3E2;
+  --color-warning-text:      #7A4800;
+  --color-error:             #D64045;
+  --color-error-bg:          #FCEAEA;
+  --color-error-text:        #8C1F22;
+  --color-nav-bg:            #002244;
+  --color-nav-text:          #B0B7BC;
+  --color-nav-text-active:   #FFFFFF;
+  --color-nav-accent:        #1A7ABF;
+  --shadow-sm:  0 1px 3px rgba(0, 34, 68, 0.08);
+  --shadow-md:  0 4px 12px rgba(0, 34, 68, 0.10);
+  --shadow-lg:  0 8px 24px rgba(0, 34, 68, 0.12);
+}
+
+/* ============================================================
+   BASE RESETS & DEFAULTS
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--color-text-brand);
+}
+
+h1 { font-size: var(--text-3xl); }
+h2 { font-size: var(--text-2xl); }
+h3 { font-size: var(--text-xl); }
+h4 { font-size: var(--text-lg); }
+h5 { font-size: var(--text-md); }
+h6 { font-size: var(--text-base); }
+
+p {
+  color: var(--color-text-primary);
+  line-height: 1.65;
+}
+
+a {
+  color: var(--color-interactive);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+a:hover { color: var(--color-interactive-hover); }
+
+input, textarea, select {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-3);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  width: 100%;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 3px rgba(26, 122, 191, 0.15);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--color-text-disabled);
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+}
+
+/* ============================================================
+   DARK MODE SCROLLBARS
+   ============================================================ */
+@media (prefers-color-scheme: dark) {
+  * { scrollbar-color: #2A4462 #0A1628; scrollbar-width: thin; }
+  ::-webkit-scrollbar              { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-track        { background: #0A1628; }
+  ::-webkit-scrollbar-thumb        { background: #2A4462; border-radius: 4px; border: 2px solid #0A1628; }
+  ::-webkit-scrollbar-thumb:hover  { background: #3A5878; }
+  ::-webkit-scrollbar-corner       { background: #0A1628; }
+}
+[data-theme="dark"] * { scrollbar-color: #2A4462 #0A1628; scrollbar-width: thin; }
+[data-theme="dark"] ::-webkit-scrollbar              { width: 8px; height: 8px; }
+[data-theme="dark"] ::-webkit-scrollbar-track        { background: #0A1628; }
+[data-theme="dark"] ::-webkit-scrollbar-thumb        { background: #2A4462; border-radius: 4px; border: 2px solid #0A1628; }
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover  { background: #3A5878; }
+[data-theme="dark"] ::-webkit-scrollbar-corner       { background: #0A1628; }
